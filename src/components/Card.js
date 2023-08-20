@@ -1,9 +1,13 @@
 import React, {useRef} from 'react'
 import "./Card.scss"
 function Card({cardDetails,index}) {
-    const cardRef=useRef();
+    const cardRef=useRef(null);
+    const handleClick=(event)=>{
+    event.stopPropagation(); 
+    };
+          
   return (
-        <div className="card" id={`card${index+1}`} ref={cardRef}>
+        <div className="card" id={`card${index+1}`} ref={cardRef} onClick={handleClick}  >
             <div className="card-inner">
                 <div className="front" style={{background : `linear-gradient(45deg, ${cardDetails.gradient.color1}, ${cardDetails.gradient.color2})`}}>
                     <img src="https://i.ibb.co/PYss3yv/map.png" className="map-img"/>

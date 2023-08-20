@@ -9,7 +9,7 @@
 :root{
     --cards: 23;
     --cardHeight:87vh;
-    --cardTopPadding:1.5em;
+    --cardTopPadding:20vh;
     --cardMargin:4vw;
     --iwidth:0.6;
 }
@@ -34,6 +34,7 @@
     z-index: 1;
     backface-visibility: hidden;
 }
+
 #card1{
     --index:1;
 }
@@ -104,58 +105,66 @@
 #card25{
     --index:25;
 }
+#card26{
+    --index:26;
+}
+#card27{
+    --index:27;
+}
+#card28{
+    --index:28;
+}
+#card29{
+    --index:29;
+}
+#card30{
+    --index:30;
+}
 
-.card {
-    width: 300px;
-    height: 200px;
-    /* color: #fff; */
+.card {    
+    display: flex;
+    justify-content: center;
+    height: 25vh;
     cursor: pointer;
-    transition: all 100ms ease-in-out;
-    /* perspective: 1000px; */
-    margin: 20px auto;
     position: sticky;
-    top: calc(var(--index)*var(--cardTopPadding));
-    
-    // width: calc(var(--index)* var(--iwidth));
+    scroll-behavior: smooth;
+    top: calc(8px * (var(--index) + 1));
 }
 
 
-@for $i from 1 through 25
-{
-    #card#{$i}
-    {
-        top: (12px * ($i+1));
-        width: 100% - 1% * (25-$i);
-    }
-
-    
+#card1 {
+    transform:scale(0.9)  ;
 }
-
-
-// @for $i from 1 through 25 {
-//     #card#{$i} {
-
-//         transform:scale(var(--iwidth)+0.2) translateY(115px) ;
-
-        
-//     }
-// }
-// #card1{
-//     transform:scale(0.6) translateY(-115px) ;
-// }
-// #card2{
-//     transform:scale(0.7) translateY(-60px);
-// }
-// #card3{
-//     transform:scale(0.8) translateY(-15px);
-// }
-
-.card:active{
-    transform:scale(0.7) translateY(-60px);
+#card2 {
+    transform:scale(0.91) ;
 }
-
-
-
+#card3 {
+    transform:scale(0.92) ;
+}
+#card4 {
+    transform:scale(0.93);
+}
+#card5 {
+    transform:scale(0.94) ;
+}
+#card6 {
+    transform:scale(0.95) ;
+}
+#card7 {
+    transform:scale(0.96) ;
+}
+#card8 {
+    transform:scale(0.97) ;
+}
+#card9 {
+    transform:scale(0.98) ;
+}
+#card10 { 
+    transform:scale(0.99) ;
+}
+#card10 {
+    transform:scale(1) ;
+}
 
 .row {
     display: flex;
@@ -173,55 +182,19 @@
 }
 
 .card-no {
-    font-size: 35px;
-    margin-top: 60px;
+    
+    padding-top: 10px;
+    font-size: 21px;
+
 }
 
 .card-holder {
     font-size: 12px;
-    margin-top: 40px;
+    margin-top: 16px;
 }
 
 .name {
-    font-size: 22px;
-    margin-top: 20px;
+    font-size: 17px;
+    margin-top: 2px;
 }
-
-.bar {
-    background: #222;
-    margin-left: -30px;
-    margin-right: -30px;
-    height: 60px;
-    margin-top: 10px;
-}
-
-.card-cvv {
-    margin-top: 20px;
-}
-
-.card-cvv div {
-    flex: 1;
-}
-
-.card-cvv img {
-    width: 100%;
-    display: block;
-    line-height: 0;
-}
-
-.card-cvv p {
-    background: #fff;
-    color: #000;
-    font-size: 22px;
-    padding: 10px 20px;
-}
-
-.card-text {
-    margin-top: 30px;
-    font-size: 12px;
-}
-
-/* .signature {
-    margin-top: 30px;
-} */
 
