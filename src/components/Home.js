@@ -22,10 +22,9 @@ function Home() {
 
     useEffect(() => {
         
-        axios.get('http://localhost:3000/posts')
+        axios.get('https://my-json-server.typicode.com/sukhpreet-singh1/debit-backend/posts')
           .then(response => {
-            setData(response.data);  
-            console.log(response.data);    
+            setData(response.data);
           })
           .catch(error => {
             console.error('Error fetching data:', error);
